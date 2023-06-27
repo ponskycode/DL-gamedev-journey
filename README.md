@@ -1,3 +1,11 @@
+*Before reading further, some background information.*
+*This whole project was made as a final project for a university subject by the name 'programming roguelike games'.*
+*Being completely honest, it was overly ambitious as we were supposed to write the whole thing from scratch and everybody but me chose a 2D game.*
+*Nonetheless I was somewhat successful in creating a buggy demo based around the 1993 DOOM*
+*Please feel free to use this code however you want and send my way some information if something interesting comes of it.*
+*Below there are some of my notes written during the creation of this project. (there are some in the notes.txt file too, feel free to take inspiration)*
+
+
 # Dimensional Labirynth
 
 From the day You were born You loved adventure. Where dangerous things scared others, all You felt was excitement. When You were a kid it wasn't hard to satisfy Your hunger for adventure, however as the years went past You were burdened with expectations. While trying not to collapse under them You went out into the world seeking what was expected of You. Over the years however You had enough, Your hunger for adventure awakened and so one day You heard a rumor. In one of the abandoned buildings around the edge of town You currently reside in, there appeared seemingly out of nowhere a strange staircase. Deciding to gather some simple gear, You went out to explore where it leads to...
