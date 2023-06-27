@@ -1,0 +1,51 @@
+Rozdzielić na klasy/pliki:
+-Game
+-FieldType
+-Map
+-Statistic              <-pojedyncza statystyka, np. Inteligencja
+-Being
+-Player(Being)            <-dziedziczy po istocie (being)
+-Monster(Being)         <-dziedziczy po istocie, wszystkie atakujące potwory
+-NeutralBeing(Being)    <-dziedziczy po istocie, wszystkie neutralne postacie,
+//po dostaniu obrażeń zamieniają się w potwory (może niech dziedziczy z potwora?)
+-Item                   <-wszystkie przedmioty które mogą się przemieszczać w jakiś sposób
+
+-Settings               <-ustawienia ogolne do gry
+
+
+
+//Może dać klasę typu Element (jak element gry) w której są pola nazwa i opis?
+//Coś co każdy element gry by potrzebował w każdym razie.
+//Robić tworzenie elementów gry (typ pola, różne istoty i przedmioty) z plików
+//tekstowych w ramach łatwości dodawaniaich?
+
+Zrobić wysoką dynamikę. Po wykryciu przeciwnika na ekranie pojawia się chwilowo napis <ENEMY>,
+po czym pojawia się krótki szybko spadający timer (np. od 5 sekund w dół).
+Postać ma dostęp do kilku szybkich akcji, a wykonanie innych ogranicza realny czas jaki zajmuje
+ich znalezienie i aktywacja. Podczas tury gracza przeciwnicy się nie poruszają. Jeśli przeciwnik
+przygotował akcję która przeciwdziała akcji gracza, tura gwałtownie się kończy i przygotowana
+akcja przeciwnika się wykonuje. Gracz może 'zaatakować' przeciwnika i np gdy jest w zasięgu walki
+wręcz to po odsunięciu się od przeciwnika tamten dostaje darmowy atak podstawowy (?). W jednej turze
+można wykonać wiele akcji, ogranicza nas jedynie czas ich wykonania.
+
+Przebieg przykładowy gry:
+
+-Gracz pojawia się w lochu
+-Gracz chodzi po lochu
+-Gracz i przeciwnik znajdują się w swoim zasięgu widoku
+-Pojawia się napis <ENEMY> albo <FIGHT>
+-Pierwszą turę ma ta istota która po wyliczeniu ma najwyższą inicjatywę, powiedzmy że gracz
+-Gracz ma (powiedzmy) 5 sekund rzeczywistych do wykonania akcji
+-Gracz podchodzi do przeciwnika (zajmuje czas)
+-Gracz atakuje przeciwnika (animacja zajmuje czas)
+-Przed/na przeciwnikiem/u pojawia się grafika ataku
+-Gracz ma czas na wykonanie kolejnego ataku, wykonuje go i kolejna grafika i animacja się pojawia
+-Podczas próby wykonania trzeciego ataku tura się kończy, gracz dostaje minus do obrony za opuszczenie gardy przed następnym atakiem przeciwnika
+-Przeciwnik dostaje obrażenia z poprzednich ataków gracza
+-Przeciwnik przeżył, atakuje gracza
+-itd...
+-Gracz pokonuje przeciwnika
+-Koniec walki (można dać 'animacje' finisherów jeśli naprawdę mi się nudzi- przynajmniej do ostatniego przeciwnika)
+-Tam gdzie pokonano przeciwników znajdują się teraz ciała których ekwipunek można przeszukać (działa tak samo jak reszta ekwipunków, czy to znalezionych skrzynek, szaf itd.)
+-Gracz ma ograniczony udźwig i ograniczenia względem niewygodnych do niesienia przedmiotów, więc nie może mieć X broni jeśli chce ich używać (może związać liną kilka razem żeby je nieść, ale są ograniczenia wagowe i nie może ich wtedy używać do ataku)
+-Po zabraniu tego co potrzebuje, gracz kontynuuje eksploracje
